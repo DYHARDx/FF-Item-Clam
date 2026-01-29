@@ -4,46 +4,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Free Fire Item Clam</title>
+    <title>Free Fire Item Claim</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body class="page-login">
+<body>
 
     <!-- Floating Curved Navigation -->
     <nav class="floating-nav">
         <ul>
-            <li class="active"><span class="material-icons">person</span> Login</li>
-            <li><span class="material-icons">card_giftcard</span> Rewards</li>
+            <li class="active" onclick="window.location.href='index.html'"><span class="material-icons">home</span> Home
+            </li>
+            <li onclick="window.location.href='check-id.html'"><span class="material-icons">person_search</span> ID
+                Check</li>
+            <li onclick="window.location.href='about.html'"><span class="material-icons">info</span> About</li>
         </ul>
     </nav>
 
-    <div class="container main-content-padding center-all">
+    <div class="container main-content-padding">
 
-        <h1>Free Fire Item Clam</h1>
-        <p class="subtitle">Login with your UID to check eligibility.</p>
+        <h1>Free Fire Item Claim</h1>
+        <p class="subtitle">Enter your UID to check stats & claim rewards!</p>
 
-        <!-- Profile / UID Check Section -->
-        <div class="profile-section" id="profileSection">
-            <div class="profile-card">
-                <div class="profile-avatar">
-                    <span class="material-icons">account_circle</span>
-                </div>
-                <div class="profile-info">
-                    <h2>Player Info</h2>
-                    <p id="playerStatus" class="status-text">Not Logged In</p>
-                </div>
 
-                <!-- Login Inputs (Stacked) -->
-                <div class="uid-input-group vertical">
-                    <input type="number" id="uidInput" placeholder="Enter Your UID" autocomplete="off">
-                    <button id="checkUidBtn">Login</button>
+
+        <div class="image-grid">
+            <!-- Item 1 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="1st.jpeg" alt="Reward Item 1">
                 </div>
-                <p id="loginMsg" class="login-msg"></p>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="claimReward()">Claim Now</button>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="2nd.jpeg" alt="Reward Item 2">
+                </div>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="claimReward()">Claim Now</button>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="3rd.png" alt="Reward Item 3">
+                </div>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="claimReward()">Claim Now</button>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="4th.jpeg" alt="Reward Item 4">
+                </div>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="claimReward()">Claim Now</button>
+                </div>
             </div>
         </div>
+
+
 
     </div>
 
@@ -55,8 +88,7 @@
                 <a href="#">Terms of Service</a>
                 <a href="#">Contact Us</a>
             </div>
-            <p>&copy; 2024 Free Fire Item Clam. All rights reserved.</p>
-            <p class="disclaimer">This is a fan-made website and is not affiliated with Garena Free Fire.</p>
+            <p>&copy; 2026 Free Fire Item Claim. All rights reserved.</p>
         </div>
     </footer>
 

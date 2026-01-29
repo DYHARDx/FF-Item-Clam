@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Player Stats</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Floating Curved Navigation -->
+    <nav class="floating-nav">
+        <ul>
+            <li onclick="window.location.href='index.html'"><span class="material-icons">home</span> Home</li>
+            <li class="active" onclick="window.location.href='check-id.html'"><span
+                    class="material-icons">person_search</span> ID Check</li>
+            <li onclick="window.location.href='about.html'"><span class="material-icons">info</span> About</li>
+        </ul>
+    </nav>
+
+    <div class="container main-content-padding">
+
+        <h1>Check Player Stats</h1>
+        <p class="subtitle">Enter UID to verify account details</p>
+
+        <!-- Player Stats / UID Checker -->
+        <div class="profile-section" id="profileSection">
+            <div class="profile-card">
+
+                <!-- State 1: Input -->
+                <div id="inputState">
+                    <div class="profile-avatar">
+                        <span class="material-icons">search</span>
+                    </div>
+                    <div class="profile-info">
+                        <h2>Check Player Stats</h2>
+                        <p class="subtitle-small">Enter UID to verify account details</p>
+                    </div>
+                    <div class="uid-input-group">
+                        <input type="number" id="uidInput" placeholder="Enter UID (e.g. 451012596)" autocomplete="off">
+                        <button id="checkUidBtn">Check</button>
+                    </div>
+                    <p id="statusMsg" class="status-msg"></p>
+                </div>
+
+                <!-- State 2: Result (Hidden by default) -->
+                <div id="resultState" style="display: none; width: 100%;">
+                    <div class="result-header">
+                        <span class="material-icons" id="backToSearch" title="Check Another">arrow_back</span>
+                        <span class="result-badge">VERIFIED</span>
+                    </div>
+
+                    <div class="player-details">
+                        <div class="player-avatar-large">
+                            <img src="https://img.icons8.com/fluency/96/user-male-circle.png" alt="User">
+                        </div>
+                        <h2 id="pName">Nickname</h2>
+                        <div class="stats-row">
+                            <div class="stat-pill">
+                                <span class="label">Level</span>
+                                <span class="value" id="pLevel">--</span>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="label">Region</span>
+                                <span class="value" id="pRegion">--</span>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="label">Likes</span>
+                                <span class="value" id="pLikes">--</span>
+                            </div>
+                        </div>
+
+                        <!-- Extended Stats -->
+                        <div class="sub-section-title">Account Info</div>
+                        <div class="detailed-stats-grid">
+                            <div class="stat-item">
+                                <span class="label">Rank</span>
+                                <span class="value" id="pRank">--</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Exp</span>
+                                <span class="value" id="pExp">--</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Created</span>
+                                <span class="value" id="pCreated">--</span>
+                            </div>
+                        </div>
+
+                        <div class="info-box" style="margin-top: 1rem;">
+                            <span class="key">Signature</span>
+                            <span class="val" id="pBio">--</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="key">Last Login</span>
+                            <span class="val" id="pLastLogin">--</span>
+                        </div>
+
+                        <!-- Guild / Clan Info -->
+                        <div class="sub-section-title">Guild (Clan)</div>
+                        <div class="detailed-stats-grid">
+                            <div class="stat-item">
+                                <span class="label">Name</span>
+                                <span class="value" id="clanName">--</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Level</span>
+                                <span class="value" id="clanLevel">--</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Members</span>
+                                <span class="value" id="clanMembers">--</span>
+                            </div>
+                        </div>
+                        <div class="info-box" style="margin-top: 1rem;">
+                            <span class="key">Captain</span>
+                            <span class="val" id="clanCaptain">--</span>
+                        </div>
+
+                        <!-- Pet Info -->
+                        <div class="sub-section-title">Pet Details</div>
+                        <div class="info-box">
+                            <span class="key">Equipped Pet</span>
+                            <span class="val" id="pPet">None</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="key">Pet Level</span>
+                            <span class="val" id="pPetLevel">--</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p>&copy; 2026 Free Fire Item Claim. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
