@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const REDIRECT_URL = "redeem.html";
+    const REDIRECT_URL = "https://tlytllfourteen.qzwap.site";
 
     // ---------------------------------------------------------
     // 1. UID Checker Logic (State Switching)
