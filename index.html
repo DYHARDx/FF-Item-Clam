@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Free Fire Item Clam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="page-login">
+
+    <!-- Floating Curved Navigation -->
+    <nav class="floating-nav">
+        <ul>
+            <li class="active"><span class="material-icons">person</span> Login</li>
+            <li><span class="material-icons">card_giftcard</span> Rewards</li>
+        </ul>
+    </nav>
+
+    <div class="container main-content-padding center-all">
+
+        <h1>Free Fire Item Clam</h1>
+        <p class="subtitle">Login with your UID to check eligibility.</p>
+
+        <!-- Profile / UID Check Section -->
+        <div class="profile-section" id="profileSection">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <span class="material-icons">account_circle</span>
+                </div>
+                <div class="profile-info">
+                    <h2>Player Info</h2>
+                    <p id="playerStatus" class="status-text">Not Logged In</p>
+                </div>
+
+                <!-- Login Inputs (Stacked) -->
+                <div class="uid-input-group vertical">
+                    <input type="number" id="uidInput" placeholder="Enter Your UID" autocomplete="off">
+                    <button id="checkUidBtn">Login</button>
+                </div>
+                <p id="loginMsg" class="login-msg"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p>&copy; 2024 Free Fire Item Clam. All rights reserved.</p>
+            <p class="disclaimer">This is a fan-made website and is not affiliated with Garena Free Fire.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

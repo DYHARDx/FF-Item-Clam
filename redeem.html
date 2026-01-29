@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeem - Free Fire Item Clam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="page-redeem">
+
+    <!-- Floating Curved Navigation -->
+    <nav class="floating-nav">
+        <ul>
+            <li onclick="window.location.href='index.html'"><span class="material-icons">logout</span> Logout</li>
+            <li class="active"><span class="material-icons">card_giftcard</span> Rewards</li>
+        </ul>
+    </nav>
+
+    <div class="container main-content-padding">
+
+        <h1>Exclusive Rewards</h1>
+        <p class="subtitle">Claim your items before time runs out!</p>
+
+        <!-- Player Info Display (Read Only) -->
+        <div class="profile-section">
+            <div class="profile-card compact">
+                <div class="profile-avatar thumbnail">
+                    <span class="material-icons">account_circle</span>
+                </div>
+                <div class="profile-info">
+                    <div id="redeemPlayerName" style="font-size:1.2rem; color:var(--primary); font-weight:800;">
+                        Loading...</div>
+                    <div id="redeemPlayerStats" style="font-size:0.9rem; color:#fff; opacity:0.9;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rewards Grid -->
+        <div class="image-grid">
+            <!-- Item 1 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="1st.jpeg" alt="Reward Item 1">
+                </div>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="attemptClaim()">Claim Now</button>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="2nd.jpeg" alt="Reward Item 2">
+                </div>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="attemptClaim()">Claim Now</button>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="3rd.png" alt="Reward Item 3">
+                </div>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="attemptClaim()">Claim Now</button>
+                </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="item-card">
+                <div class="image-wrapper">
+                    <img src="4th.jpeg" alt="Reward Item 4">
+                </div>
+                <div class="card-content">
+                    <div class="card-timer" data-time="7200">02:00:00</div>
+                    <button class="card-claim-btn" onclick="attemptClaim()">Claim Now</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <p>&copy; 2024 Free Fire Item Clam. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
