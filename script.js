@@ -61,6 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     // 1. Basic Info
                     document.getElementById('pName').textContent = info.nickname || 'N/A';
+                    // Dynamic Avatar based on proper casing of nickname
+                    const avatarUrl = `https://api.dicebear.com/9.x/avataaars/svg?seed=${encodeURIComponent(info.nickname)}`;
+                    document.getElementById('pAvatar').src = avatarUrl;
+
                     document.getElementById('pLevel').textContent = info.level || '--';
                     document.getElementById('pRegion').textContent = info.region || '--';
                     document.getElementById('pLikes').textContent = info.liked || '0';
@@ -71,6 +75,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('pCreated').textContent = info.createat ? new Date(parseInt(info.createat) * 1000).toLocaleDateString() : 'N/A';
                     document.getElementById('pLastLogin').textContent = info.lastloginat ? new Date(parseInt(info.lastloginat) * 1000).toLocaleDateString() : 'N/A';
                     document.getElementById('pBio').textContent = social && social.signature ? social.signature : 'No signature';
+
+                    // 2.1 Extra Account Stats
+                    document.getElementById('pCsRank').textContent = info.csrank || '--';
+                    document.getElementById('pBadges').textContent = info.badgecnt || '0';
+                    document.getElementById('pCredit').textContent = data.creditscoreinfo ? data.creditscoreinfo.creditscore : '--';
+
+                    // Battle Tags
+                    if (social && social.battletag && Array.isArray(social.battletag)) {
+                        const tags = social.battletag.map(tag => {
+                            return tag.replace('PLAYERBATTLETAGID', ''); // Clean string
+                        }).join(', ');
+                        document.getElementById('pBattleTags').textContent = tags || 'None';
+                    } else {
+                        document.getElementById('pBattleTags').textContent = 'None';
+                    }
 
                     // 3. Social / Pet
                     document.getElementById('pPet').textContent = pet && pet.name ? pet.name : 'None';

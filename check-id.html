@@ -56,7 +56,7 @@
 
                     <div class="player-details">
                         <div class="player-avatar-large">
-                            <img src="https://img.icons8.com/fluency/96/user-male-circle.png" alt="User">
+                            <img id="pAvatar" src="https://img.icons8.com/fluency/96/user-male-circle.png" alt="User">
                         </div>
                         <h2 id="pName">Nickname</h2>
                         <div class="stats-row">
@@ -89,6 +89,19 @@
                                 <span class="label">Created</span>
                                 <span class="value" id="pCreated">--</span>
                             </div>
+                            <!-- New Stats -->
+                            <div class="stat-item">
+                                <span class="label">CS Rank</span>
+                                <span class="value" id="pCsRank">--</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Badges</span>
+                                <span class="value" id="pBadges">--</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Honor Score</span>
+                                <span class="value" id="pCredit">--</span>
+                            </div>
                         </div>
 
                         <div class="info-box" style="margin-top: 1rem;">
@@ -98,6 +111,10 @@
                         <div class="info-box">
                             <span class="key">Last Login</span>
                             <span class="val" id="pLastLogin">--</span>
+                        </div>
+                        <div class="info-box">
+                            <span class="key">Battle Tags</span>
+                            <span class="val" id="pBattleTags">--</span>
                         </div>
 
                         <!-- Guild / Clan Info -->
